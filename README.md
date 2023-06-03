@@ -1,11 +1,13 @@
 # pubsub_actors
-framework that implements actors model for simple and safe multitasking in C using only static memory allocation and intended for use in embedded systems.
+framework that implements actors model for simple and safe multitasking in C using only static memory allocation and intended for use in embedded systems. It's still in research 
+and development state, not ready for any practical use!
 
 # main principles
 1) actors are simple functions that run until completion and are interacting only by means of a common message bus.
 2) the message bus is a publisher/subscriber copy-based data distribution subsystem with possibility to mute specific publishers.
 3) messages carry only generic typed payloads (for example, bool or int32 or string) with simple and unambiguous meaning (for example, count of pulses is int32, speed from GPS is float, switch states is bool).
 4) message's content is described in message's topic - record in pub/sub queue manager's list that holds data description as "path" in suffix tree separated by dots, data type and size in memory. For example, valid path could be ".brd.gps.speed" - path to GPS speed topic that posts information from GPS embedded in the board.
+![example of the suffic tree that describes topics in a system](img/suffix_tree.png)
 
 # main goals
 1) decoupling of the software modules to maximum possible level where the ONLY interaction between the modules goes through common copy-based message queue based on publisher/subscriber model. Advantages of the approach are following:
