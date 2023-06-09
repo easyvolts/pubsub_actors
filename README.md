@@ -20,7 +20,7 @@ and development state, not ready for any practical use!
 3) greate traceability in case of fimware problems (events history can be logged simply and precisely if necessary). 
 4) event driven work of the system for simple implementation of the power saving mode.
 5) portability at extrem level - thanks to no need in tightly HW dependent features like context switching and recovering.
-6) adding a feature in a subset of modules shouldn't require changes in the rest of the modules (when data consumer whants subscribe to additional information it shouldn't require any changes in data producer or message queue manager. And when publisher has some information it should publish it even if there is no a consumer that could be able to use it.
+6) adding a feature in a subset of modules shouldn't require changes in the rest of the modules (when data consumer wants subscribing to additional information it shouldn't require any changes in data producer or message queue manager. And when publisher has some information it should publish it even if there is no a consumer that could be able to use it.
 
 # todo
 1) add wakeup and sleep callbacks for simple low power mode integration.
