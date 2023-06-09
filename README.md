@@ -24,3 +24,4 @@ and development state, not ready for any practical use!
 
 # todo
 1) add wakeup and sleep callbacks for simple low power mode integration.
+2) add stm32 and/or arduino demo projects.
